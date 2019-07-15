@@ -30,7 +30,6 @@ if (sizeof($results) > 0) {
                 $watched = "unwatched-movie";
             }
         } else {
-            print_r(json_decode('['.$watched_movies.']', true));
             $watched = "unwatched-movie";
         }
 
