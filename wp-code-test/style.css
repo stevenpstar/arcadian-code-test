@@ -1,0 +1,611 @@
+/*
+Theme Name: Steven Star Code Test
+Author: Steven Star
+Description: Arcadian Code Test
+
+*/
+
+
+/*
+
+Content
+
+1. Headers/navigation classes
+2. Front Page/Landing Page
+3. Movie Listing Page
+4. Single Listing Page
+
+*/
+
+html,
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* 1. */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 5em;
+    max-width: 100%;
+    z-index: 200;
+}
+
+.header-title {
+    margin-left: 1em;
+    color: white;
+    font-size: 2.5em;
+}
+
+.header-title-coloured {
+    margin-left: 1em;
+    color: rgb(133, 61, 151);
+    font-size: 2.5em;
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 13em;
+}
+
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 18em;
+    width: auto;
+    z-index: 100;
+}
+
+.main-navigation ul{
+    display: flex;
+    justify-content: center;
+    color: inherit;
+}
+
+.main-navigation ul li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.main-navigation a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.15s;
+    font-weight: 600;
+    width: auto;
+}
+
+.main-navigation a:hover {
+    color: rgb(219, 198, 211);
+    
+}
+
+.light-text {
+    color: white;
+}
+
+.dark-text {
+    color: rgb(160, 160, 160);
+}
+
+
+/* 2. */
+
+.landing-page {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-image: linear-gradient(rgba(116, 32, 51, 0.7) 0%, rgba(85, 32, 112, 0.7) 100%),
+     url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-size: cover;
+}
+
+.search-bar-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.search-bar-vertical {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.tag {
+    color: white;
+    font-size: 3.5em;
+}
+
+.search-bar-wrap {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    
+}
+
+.search-bar {
+    width: 60%;
+    height: 2em;
+    min-width: 15em;
+    max-width: 60%;
+    padding: 0.2em 0em 0.2em 0.5em;
+    font-size: 2em;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0px;
+    color: rgb(133, 133, 133);
+    box-shadow: 3px 6px 6px 0px rgb(28, 5, 36);
+}
+
+.search-results {
+    position: absolute;
+    display: flex;
+    top: 105%;
+    left: 14%;
+    flex-direction: column;
+    width: 72%;
+    background-color: white;
+    height: auto;
+}
+
+.search-result {
+    display: flex;
+    position: relative;
+    padding-left: 2em;
+}
+
+.search-result:hover {
+    background-color: rgb(197, 197, 197);
+    cursor: pointer;
+}
+
+.search-result a {
+    text-decoration: none;
+    color: grey;
+}
+
+/* 3. */
+
+.vert-bottom-margin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 5em;
+}
+
+.hero-section {
+    position: relative;
+    display: flex;
+    top: 5em;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 10em;
+    max-width: 100%;
+    max-height: 100%;
+    
+    background-image: linear-gradient(rgba(116, 32, 51, 0.7) 0%, rgba(85, 32, 112, 0.7) 100%),
+     url("https://images.pexels.com/photos/758976/pexels-photo-758976.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    z-index: -90;
+    background-size: cover;
+}
+
+.hero-section h1 {
+    margin: 0px;
+    margin-left: 70px;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    
+}
+
+.vert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.horizontal-list {
+    position: relative;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 70px;
+}
+
+.horizontal-list li {
+    text-decoration: none;
+    list-style: none;
+    padding: 0.2em;
+}
+
+.horizontal-list li a {
+    text-decoration: none;
+    color: white;
+}
+
+.horizontal-list li a::after {
+    content: ' | ';
+}
+
+.strong-list-item {
+    color: rgb(236, 236, 236);
+}
+
+.weak-list-item {
+    color: rgb(185, 185, 185);
+    font-weight: 100;
+}
+
+.grid-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+    top: 5em;
+    width: 100vw;
+    height: auto;
+    max-width: 100%;
+    padding-top: 2em;
+    padding-bottom: 10em;
+    background-color: rgb(240, 240, 240);
+    align-items: flex-start;
+    
+}
+
+.grid-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 1em;
+    margin-bottom: 2em;
+    width: 30%;
+    min-width: 300px;
+    animation-duration: 0.08s;
+    animation-name: fall;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+    border-radius: 15px;
+    padding-bottom: 1em;
+    
+}
+
+.grid-container:hover {
+    animation-duration: 0.08s;
+    animation-name: rise;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fall {
+    from {
+        top: -10px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes rise {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: -10px;
+    }
+}
+
+.grid-image {
+    position: relative;
+    width: 100%;
+    max-height: 350px;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.grid-image img {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.grid-panel {
+    position: relative;
+    top: 0px;
+    min-height: 50%;
+    height: auto;
+    width: 100%;
+    z-index: 200;
+    background-color: white;
+}
+
+.grid-panel-wrapper {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.rating-genre-section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rating span::before {
+    content: ' ☆ ';
+}
+
+.details-btn {
+    position: relative;
+    height: 2.5em;
+    width: 30%;
+    border: 0px;
+    color: white;
+    background-color: rgb(133, 61, 151);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    transition: all 0.5s;
+    border-radius: 5px;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+.details-btn:hover {
+    cursor: pointer;
+    background-color: rgb(160, 85, 179);
+}
+
+.unwatched-movie {
+    position: relative;
+    height: 2.5em;
+    width: 33%;
+    border: 0px;
+    color: white;
+    background-color: rgb(162, 149, 165);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    transition: all 0.5s;
+    border-radius: 5px;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+.unwatched-movie:hover {
+    cursor: pointer;
+    background-color: rgb(143, 185, 127);
+}
+
+
+.watched-movie {
+    position: relative;
+    height: 2.5em;
+    width: 33%;
+    border: 0px;
+    color: white;
+    background-color: rgb(129, 190, 110);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    transition: all 0.5s;
+    border-radius: 5px;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+
+/* 4. */
+
+.movie-details-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    max-width: 50%;
+    height: auto;
+    background-color: blue;
+    top: 0px;
+}
+
+.single-panel {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    height: 50%;
+    width: 100vw;
+    background-color: white;
+    top: 25%;
+    max-width: 100%;
+}
+
+.single-panel img {
+    position: relative;
+    top: -15em;
+    height: 100%;
+    min-height: 100%;
+    width: auto;
+    max-height: 444px;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.movie-title-genre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -7.5em;
+    color: rgb(236, 236, 236);
+}
+
+.movie-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.movie-genre-list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 10px;
+    color: rgb(221, 221, 221);
+}
+
+.movie-genre-list ul li {
+    list-style: none;
+}
+
+.movie-genre-list ul li::before {
+    content: ' ';
+}
+
+#movie-length::after {
+    content: ' | ';
+}
+
+#movie-genres::after {
+    content: ' | ';
+}
+
+.movie-btns-rating {
+    position: relative;
+    top: -5em;
+    z-index: 200;
+}
+
+.movie-btn {
+    padding: 0.5em;
+    background-color: rgb(133, 61, 151);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    z-index: 0;
+    
+}
+
+.movie-btn:hover {
+    cursor: pointer;
+    background-color: rgb(160, 85, 179);
+}
+
+.movie-trailer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1000;
+    background-color: rgba(32, 32, 32, 0.8);
+}
+
+.movie-trailer-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.movie-trailer-x {
+    position: relative;
+    top: -1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: rgb(206, 206, 206);
+}
+
+.movie-trailer-x:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.loading-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-color: white;
+    z-index: 300;
+    transition: all 1s;
+}
+
+.loading-overlay-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.loading-overlay-wrapper p {
+    color: rgb(133, 61, 151);
+    font-size: 2.5em;
+}
+
+.hide-loading-screen {
+
+    animation: hide 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+        visibility: hidden;
+    }
+}
+
+
+.movie-overview {
+    max-width: 20em;
+}
+
