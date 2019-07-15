@@ -6,7 +6,6 @@ global $wpdb;
 
 $watched_movies = $_POST['watched_movies'];
 
-//$wm = json_decode($watched_movies);
 
 $results = $wpdb->get_results("
 SELECT * FROM wp_movies LIMIT 6
@@ -60,7 +59,6 @@ if (sizeof($results) > 0) {
     </div>"; 
 
     }
-    //print_r(json_encode($results));
 
 } 
 
