@@ -8,8 +8,14 @@ Searching for a movie will search utilise themoviedb API, searching their databa
 The "MOVIES" navigation menu will take you to a listing of (currently 6 max) movies, pulled from our database.
 
 
+##Movie Listings
+
 ![Screenshot2](https://github.com/stevenpstar/arcadian-code-test/blob/master/images/screenshot2.png?raw=true "Screenshot 2" )
 
+Pressing the details button will send you to the single-page view of the movie.
+
+##Single Page View
 
 ![Screenshot3](https://github.com/stevenpstar/arcadian-code-test/blob/master/images/screenshot3.png?raw=true "Screenshot 3" )
 
+The Trailer button will bring up an overlay with an embedded YouTube video, the "Read More" button will link to the related imdb page.
