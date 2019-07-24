@@ -31,6 +31,8 @@ function wptheme_scripts() {
     wp_enqueue_style('wptheme_styles', get_stylesheet_uri());
     wp_enqueue_style('wptheme_google_font_one', 'https://fonts.googleapis.com/css?family=Quicksand&display=swap');
     wp_enqueue_script('wptheme_custom_js', get_template_directory_uri()."/script.js", false);
+    $translation_array = array('templateUrl' => get_stylesheet_directory_uri() );
+    wp_localize_script('wptheme_custom_js', 'thm', $translation_array);
 }
 
 add_action('wp_enqueue_scripts', 'wptheme_scripts');
