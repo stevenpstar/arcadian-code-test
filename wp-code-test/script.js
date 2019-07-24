@@ -1,4 +1,4 @@
-//Comments
+// Updating
 var moviesWatched = JSON.parse(localStorage.getItem("watched_movies"));
 
 
