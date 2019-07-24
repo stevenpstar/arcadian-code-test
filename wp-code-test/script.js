@@ -22,7 +22,7 @@ window.onload = function() {
 
 function postToPHP() {
     let xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "wp-content/themes/wp-test-theme/searchmovie.php", true);
+    xmlhttp.open("POST", thm.templateUrl + "/searchmovie.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -42,7 +42,7 @@ function postToPHP() {
 
 function getMovie(param) {
     let xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "../wp-content/themes/wp-test-theme/getmovie.php", true);
+    xmlhttp.open("POST", thm.templateUrl + "/getmovie.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -59,7 +59,7 @@ function getMovie(param) {
 
 function getMovieList() {
     let xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "../wp-content/themes/wp-test-theme/getmovielist.php", true);
+    xmlhttp.open("POST", thm.templateUrl + "/getmovielist.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -136,7 +136,7 @@ function createSearchResult(image, title, id) {
     new_result.classList.add("search-result");
 
     let new_link = document.createElement("a");
-    new_link.href = "/wp/movie/?movieid=" + id;
+    new_link.href = "/movie/?movieid=" + id;
 
     let new_title = document.createElement("h2");
     let new_title_text = document.createTextNode(title);
